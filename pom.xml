@@ -107,6 +107,7 @@
                         </property>
                     </properties>
                     <workingDirectory>target/</workingDirectory>
+                    <reportsDirectory>target/report</reportsDirectory>
                     <suiteXmlFiles>
                         <file>src/test/resources/Suite.xml</file>
                     </suiteXmlFiles>

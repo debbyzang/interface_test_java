@@ -1,6 +1,5 @@
 package cn.mytest.api.utils;
 
-import cn.mytest.api.base.Log;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 
@@ -20,7 +19,7 @@ public class ParseUtil {
         if (result.contains(key)) {
             return JSON.parseObject(result).getString(key);
         } else {
-            Log.error(" key: " + key + " doesn't exist");
+            System.out.println (" key: " + key + " doesn't exist");
             return null;
         }
     }

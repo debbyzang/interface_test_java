@@ -1,0 +1,9 @@
+{
+  "login": "/public/users/login",
+  "workspaces": "/workspaces",
+  "getUserId": "/users/current",
+  "updateworkspaces": "/workspaces/",
+  "designProject": "/design/projects/"
+
+
+}
