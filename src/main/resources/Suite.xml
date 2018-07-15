@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="apiDemo">
+	<test verbose="2" name="APIDemoTest">
+		<classes>
+			<class name="cn.mytest.api.cases.APITest" >
+				<!--<methods>
+                    <include name="loginTest" />
+                    <include name="createWorkspaceTest" />
+                </methods>-->
+			</class>
+			<!--<class name="cn.mytest.api.cases.APITest" />-->
+		</classes>
+	</test> <!-- Default test -->
+</suite> <!-- Default suite -->
