@@ -2,7 +2,7 @@ package cn.mytest.api.base;
 
 
 import cn.mytest.api.utils.BizUtils;
-import cn.mytest.api.utils.JsonReader;
+import cn.mytest.api.utils.JsonUtil;
 import org.apache.commons.io.IOUtils;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
 
 public class TestBase {
 
-    static JsonReader jr = new JsonReader ( );
+    static JsonUtil jr = new JsonUtil( );
 
     //读取配置文件
     private static String testjson;

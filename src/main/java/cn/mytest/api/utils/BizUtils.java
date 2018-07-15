@@ -13,12 +13,12 @@ public class BizUtils extends TestBase {
      */
     public static String login() {
         String postResult = HttpUtil.post ( baseURL + loginURL + "?username=" + usr + "&password=" + pwd, null );
-        return ParseUtil.parseString ( postResult, "token" );
+        return JsonUtil.parseString ( postResult, "token" );
     }
 
     public static String getUserId() {
         String getResult = HttpUtil.get ( baseURL + getUserIdURL, null );
-        return ParseUtil.parseString ( getResult, "id" );
+        return JsonUtil.parseString ( getResult, "id" );
     }
 
     public static WorkSpace workspace(String create, String description, String id, String lastModified, String name

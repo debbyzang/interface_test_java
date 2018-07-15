@@ -3,7 +3,7 @@ package cn.mytest.api.cases;
 
 import cn.mytest.api.base.TestBase;
 import cn.mytest.api.utils.BizUtils;
-import cn.mytest.api.utils.ParseUtil;
+import cn.mytest.api.utils.JsonUtil;
 import org.testng.annotations.Test;
 
 
@@ -26,9 +26,9 @@ public class APITest extends TestBase{
         String name = "workspacename"+ System.currentTimeMillis ();
         String userid = userId;
         String result = BizUtils.createWorkspace ( create, description, id, lastModified, name, userid );
-        String reName = ParseUtil.parseString ( result, "name" );
+        String reName = JsonUtil.parseString ( result, "name" );
         check.assertEquals ( reName, name, "create workspace failed" );
-        workspaceId = ParseUtil.parseString ( result, "id" );
+        workspaceId = JsonUtil.parseString ( result, "id" );
     }
 
     @Test(dependsOnMethods = "createWorkspaceTest")
@@ -40,7 +40,7 @@ public class APITest extends TestBase{
         String name = "workspacenameupdate"+ System.currentTimeMillis ();
         String userid = userId;
         String result = BizUtils.updateWorkspace ( create, description, id, lastModified, name, userid );
-        String reName = ParseUtil.parseString ( result, "name" );
+        String reName = JsonUtil.parseString ( result, "name" );
         check.assertEquals ( reName, name, "update workspace failed" );
     }
 
@@ -54,9 +54,9 @@ public class APITest extends TestBase{
         String userid = "";
         String type = "DESIGN";
         String result = BizUtils.createProject ( create, description, id, lastModified, name, userid, type, workspaceId );
-        String reName = ParseUtil.parseString ( result, "name" );
+        String reName = JsonUtil.parseString ( result, "name" );
         check.assertEquals ( reName, name, "create project failed" );
-        projectId = ParseUtil.parseString ( result, "id" );
+        projectId = JsonUtil.parseString ( result, "id" );
     }
 
     @Test(dependsOnMethods = "createProjectTest")
